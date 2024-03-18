@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layer_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:dividerHeight="1dp"
+        android:divider="#CCCCCC" />
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add"
+            android:onClick="onAddButtonClick"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="deleteSelectedBook"/>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvItemCountAbove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvItemCount"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Total Books: 0" />
+    <TextView
+        android:id="@+id/tvItemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Books read: 0" />
+</RelativeLayout>
